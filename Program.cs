@@ -5,7 +5,9 @@ builder.Services
     .AddQueryType(q => q.Name("Query"))
     .AddType<FirstQuery>()
     .AddType<SecondQuery>()
-    .AddMutationType<Mutation>();
+    .AddMutationType(m => m.Name("Mutation"))
+    .AddType<FirstMutation>()
+    .AddType<SecondMutation>();
 var app = builder.Build();
 
 app.MapGraphQL();

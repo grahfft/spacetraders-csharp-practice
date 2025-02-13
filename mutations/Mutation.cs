@@ -16,8 +16,3 @@ public class Mutation
         return new BookPayload(book);
     }    
 }
-
-public record BookPayload(Book? record, string? error = null);
-public record BookInput(string title, Guid author);
-public record AuthorPayload(Author record);
-public record AuthorInput(string name);
